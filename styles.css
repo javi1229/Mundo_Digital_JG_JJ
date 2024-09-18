@@ -1,0 +1,187 @@
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background-image: url('wrike-1024x513.jpg.webp');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6); /* Overlay oscurecido */
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      z-index: 2;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin: 15px 0 30px;
+      z-index: 2;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 3;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #555;
+      border-radius: 5px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    section h2 {
+      color: #333;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    section p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      color: #666;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p {
+        font-size: 1.2rem;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      .menu-toggle {
+        background-color: #333;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        border: none;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        z-index: 4;
+      }
+
+      nav ul li a {
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+      }
+    }
+  
